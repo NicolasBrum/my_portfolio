@@ -1,0 +1,226 @@
+:root {
+    --background: #f4f4f2;
+    --light-blue: #5b88a5;
+    --light-black: #191013;
+    --off-white: #d4cdc5;
+    --very-dark-blue: #243a69;
+}
+
+body {
+    background-color: var(--off-white);
+    height: 100vh;
+    font-family: "Outfit", sans-serif;
+}
+header {
+    height: auto;
+}
+
+.header__navbar {
+    background-color: var(--very-dark-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    padding: 0.8rem;
+}
+.header__links-right {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.header__link {
+    color: var(--background);
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 0.8rem;
+}
+.header__link:hover {
+    background-color: var(--light-blue);
+    border-radius: 0.7rem;
+}
+
+.container {
+    height: 100vh;
+}
+
+.start {
+    display: flex;
+    justify-content: space-around;
+}
+.start__apresentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    width: 50%;
+    gap: 20px;
+}
+.start__image {
+    background-image: url("../images/nicolas.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 500px;
+}
+.start__title {
+    font-size: 3.5rem;
+    letter-spacing: 5px;
+    color: var(--very-dark-blue);
+}
+.start__subtitle {
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    line-height: 2.5rem;
+    color: var(--light-blue);
+}
+
+.description {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--light-black);
+    color: var(--background);
+}
+.description__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    gap: 20px;
+    padding: 10px;
+}
+.description__image {
+    width: 250px;
+    height: 250px;
+}
+.description__text__container {
+    border: 1px solid green;
+    text-align: left;
+    height: auto;
+    width: 30%;
+    padding: 0px 20px;
+}
+.description__text {
+    font-size: 1.5rem;
+}
+.description__image {
+    border-radius: 30px;
+}
+.description__title__container {
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+}
+.description__title__container::after {
+    content: '';
+    position: absolute;
+    bottom: -158px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--light-blue);
+    border-radius: 2px;
+}
+.description__title {
+    font-size: 2.8rem;
+}
+
+.technologies {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.technologies__header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.technologies__title {
+    font-size: 2.5rem;
+    color: #333;
+    position: relative;
+    display: inline-block;
+}
+
+.technologies__title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--light-blue);
+    border-radius: 2px;
+}
+
+/* Grid de categorias */
+.technologies__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Categorias de tecnologia */
+.tech-category {
+    background-color: var(--very-dark-blue);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tech-category__title {
+    font-size: 1.5rem;
+    color: var(--off-white);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--off-white);
+}
+
+.tech-category__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
+}
+
+/* Cards de tecnologia */
+.tech-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 6px;
+    background-color: var(--off-white);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.tech-card:hover {
+    background-color: var(--off-white);
+    transform: scale(1.05);
+}
+
+.tech-card__name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    text-align: center;
+    color: var(--very-dark-blue);
+}
+
+.tech-card__image {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
