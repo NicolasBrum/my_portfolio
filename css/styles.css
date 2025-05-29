@@ -88,27 +88,31 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
     gap: 20px;
     padding: 10px;
+    color: var(--light-blue);
 }
 .description__image {
     width: 250px;
     height: 250px;
+    border-radius: 30px;
 }
 .description__text__container {
-    border: 1px solid green;
-    text-align: left;
+    text-align: justify;
+    line-height: 1.8rem;
     height: auto;
     width: 30%;
     padding: 0px 20px;
 }
 .description__text {
     font-size: 1.5rem;
+    color: var(--off-white);
 }
-.description__image {
-    border-radius: 30px;
+
+.description__subtitle {
+    font-size: 1.3rem;
 }
+
 .description__title__container {
     width: 100%;
     text-align: center;
@@ -223,4 +227,59 @@ header {
     width: 64px;
     height: 64px;
     object-fit: contain;
+}
+
+.description__image{
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+}
+
+.description__image--redbull {
+    background-image: url("../images/redbull.jpeg");
+}
+
+.description__image--eldorado {
+    background-image: url("../images/eld.jpg");
+}
+
+.description__image--caldeira {
+    background-image: url("../images/gc.jpeg");
+}
+
+.description__image--white {
+    background-image: url("../images/white.png");
+}
+
+.description__image--panvel {
+    background-image: url("../images/panvel.png");
+}
+
+.description__image--goes {
+    background-image: url("../images/images.jpg");
+}
+
+.description__image--saraiva {
+    background-image: url("../images/saraiva1.jpg");
+}
+
+.description__image--gang {
+    background-image: url("../images/gang.jpg");
+}
+
+.work__description {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--light-black);
+    color: var(--background);
+}
+
+.description__text--work {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: var(--off-white);
 }
